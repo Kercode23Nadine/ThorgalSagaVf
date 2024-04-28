@@ -1,0 +1,51 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 50px;
+  width: 80%;
+  border-radius: 60px;
+ 
+}
+.imgCom {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: $background-color;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: $link-hover-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rating {
+  color: $link-hover-color;
+}

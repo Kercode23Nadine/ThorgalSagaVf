@@ -1,0 +1,35 @@
+// **************footer**************
+
+
+#footer{
+  height: 150px;
+  background-image: url("../images/planches/C2.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  padding: 5px; 
+  background-color: $border;
+    flex-wrap: wrap;
+  p {
+    padding: 10px;
+ 
+    a {
+      font-size: 1.2rem;
+      margin: 5px 20px;
+      text-decoration: none;
+      color: $secondary-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+

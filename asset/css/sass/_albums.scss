@@ -1,0 +1,61 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  background-color: $border;
+  color: $color;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  p {
+    margin-top: 20px;
+  }
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-family: $font-family-evil;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  min-height: 60px;
+}
+
+.card__content {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.card_text {
+  min-height: 210px;
+}
+.card img {
+  max-width: 100%;
+  min-height: 288px;
+}
+// effet sur image modal
+.hover-effect {
+  display: flex;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.click-indicator {
+  font-size: 1.5rem;
+  margin: 20px;
+  text-align: center;
+  color: $background-color-burger;
+  opacity: 0.3; 
+ 
+}
+
+/* Affiche l'indicateur de clic lorsque survolé */
+.hover-effect:hover + .click-indicator {
+  opacity: 1; /* Affiche l'indicateur lors du survol de l'image */
+}

@@ -1,0 +1,64 @@
+.top{
+  height: 100px;
+}
+.logo {
+  margin-top: 45px;
+  padding-left: 10px;
+  width: 40%;
+
+}
+
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -250px;
+  background-color: $nav-color;
+  padding-top: 60px;
+  transition: right 0.8s ease;
+  & ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: $color;
+  display:block;
+  transition: 0.3s;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+ /* Active class */
+.sidenav.active {
+  right: 0;
+}
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+}
+.burger-icon span {
+  display: block;
+  width: 37px;
+  height: 6px;
+  background-color: $nav-color;
+  margin: 6px 0;
+} /* Placer le bouton d'ouverture du menu burger à droite */
+#openBtn {
+  position: fixed;
+  top: 49px;
+  right: 20px; /* le bouton à droite */
+}
+

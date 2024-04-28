@@ -1,0 +1,17 @@
+{
+    "name": "kercode23/thorgal-saga",
+    "autoload": {
+        "psr-4": {
+            "Kercode23\\ThorgalSaga\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nadine Poisson",
+            "email": "nadinepoisson000@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

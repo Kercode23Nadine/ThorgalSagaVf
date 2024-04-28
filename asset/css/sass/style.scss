@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "wood_stampregular";
+  src: url("../fonts/woodstamp-webfont.woff2") format("woff2"),
+    url("../fonts/woodstamp-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "evil_empireregular";
+  src: url("../fonts/evil_empire-webfont.woff2") format("woff2"),
+    url("../fonts/evil_empire-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "_variables";
+@import "_home";
+@import "_authors";
+@import "_albums";
+@import "_header";
+@import "_footer";
+@import "_community";
+
+// Définition du style de base pour les boutons
+@mixin btn {
+  display: flex;
+  font-family: $font-family-W;
+  justify-content: center;
+  border: 1px solid $secondary-color;
+  margin: 5px;
+  margin-top: 30px;
+  padding: 10px;
+  transition: 0.5s ease;
+  border-radius: 8px;
+  background: $button-color;
+  color: $color;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  &:hover {
+    color: $link-hover-color;
+    background: $link-color;
+  }
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background-image: url("../images/planches/fond.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 h2 h3 h4 {
+  font-family: $font-family-W;
+}
+ul li {
+  list-style-type: none;
+  
+}
+#band {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  background-image: url("../images/planches/C.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px black;
+  margin: 20px 0 20px 0;
+}
+.button {
+  @include btn();
+}
+// mise forme des champs formulaire
+@mixin form-field {
+  border-radius: 8px;
+  padding: 17px;
+  height: auto;
+  font-size: 1.3rem;
+}
+
+// mise forme formulaire
+@mixin form {
+  border: 1px solid rgb(140, 153, 185);
+  border-radius: 15px;
+  background: $nav-color;
+  width: 300px;
+  margin: 50px auto 50px auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+    letter-spacing: 1px;
+
+    padding: 20px;
+    color: $color;
+    font-family: $font-family-evil;
+  }
+  h2 {
+    font-family: $font-family-W;
+    font-size: 1.9rem;
+    text-align: center;
+    padding: 20px;
+    color: $color;
+  }
+  h3 {
+    text-align: center;
+    padding: 20px;
+    color: $color;
+  }
+  p {
+    align-items: center;
+    padding: 5px;
+    color: $color;
+  }
+  label {
+    color: $color;
+  }
+
+  a {
+    color: $secondary-color;
+
+   
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+input {
+  @include form-field();
+}
+textarea {
+  @include form-field();
+}
+label {
+  @include form-field();
+}
+
+@mixin article {
+  width: auto;
+  border-radius: 15px;
+  margin: 50px 20px 50px 20px;
+  padding: 20px;
+  background-color: $background-color;
+  color: $color;
+  h1 {
+    display: flex;
+    justify-content: center;
+    color: $color;
+    padding: 10px;
+    font-family: $font-family-evil;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-family: $font-family-evil;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: $color;
+    padding: 20px;
+  }
+  p {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+}
+.sidenav {
+  font-family: $font-family-evil;
+  a {
+    font-size: 1.7rem;
+    letter-spacing: 1.2px;
+  }
+}
+.article {
+  @include article();
+}
+.form-container {
+  @include form();
+}
+
+// Media query for tablet screens
+@media only screen and (min-width: 563px) {
+  .logo {
+    margin-bottom: 15px;
+  }
+  .article {
+    margin: 30px 80px 30px 80px;
+  }
+  #slider {
+    margin: 30px 100px 30px 100px;
+  }
+  #second-slider {
+    margin: 0 100px 60px 100px;
+  }
+}
+.form-container {
+  margin: 50px auto 50px auto;
+
+  width: 300px;
+}
+
+// cookie**************
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $border;
+  color: $background-color;
+  padding: 10px;
+  text-align: center;
+}
+
+.cookie-popup p {
+  margin: 0;
+}
+
+.button-cookies {
+  font-size: 0.8rem;
+  border-radius: 10px;
+}
+
+#accept-cookies {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  &:hover {
+    background-color: #54f059;
+  }
+}
+#refuse-cookies {
+  background-color: #c7a466;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  &:hover {
+    background-color: #f4e045;
+  }
+}
+
+// Media query for desktop screens
+@media screen and (min-width: 768px) {
+  #band {
+    display: none;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  .article img {
+    background-color: $color;
+    margin: auto;
+    padding: 10px;
+    max-width: 40%;
+    height: auto;
+  }
+  .article {
+    margin: 50px 200px 50px 200px;
+  }
+  #footer {
+    display: none;
+  }
+  .form-container {
+    margin: 50px auto 50px auto;
+
+    width: 500px;
+  }
+
+  // menu-burger*************
+
+  .sidenav {
+    height: 70px;
+    width: auto;
+    position: relative;
+    right: 0;
+    transition: none;
+    background: none;
+    ul {
+      background: $nav-color;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+    li {
+      display: inline-block;
+      border: 0.5px solid $button-color;
+      border-radius: 15px;
+      margin: 8px;
+      padding: 3px;
+    }
+    a {
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+      padding: 8px 15px 8px 15px;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+  #closeBtn.close {
+    display: none;
+  }
+  #openBtn {
+    display: none;
+  }
+  #main {
+    display: none;
+  }
+  #slider {
+    margin: 50px 200px 50px 200px;
+  }
+  #second-slider {
+    margin: 0 200px 50px 200px;
+  }
+  .slide {
+    width: 1500px;
+    height: 500px;
+  }
+  .second-slide {
+    width: 1500px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin-bottom: 10px;
+    width: 25%;
+  }
+
+
+}

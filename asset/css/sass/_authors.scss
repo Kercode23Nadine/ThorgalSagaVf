@@ -1,0 +1,31 @@
+.author-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+.author-name {
+  font-size: 34px;
+  font-weight: bold;
+  color: $border;
+  margin-bottom: 10px;
+}
+.author-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.article {
+  flex: 1;
+}
+.article img {
+  background-color: $color;
+  margin: auto;
+  padding: 10px;
+  max-width: 50%;
+  height: auto;
+}
+.article-title {
+  font-size: 24px;
+  margin-top: 10px;
+}

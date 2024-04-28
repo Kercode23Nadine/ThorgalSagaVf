@@ -1,0 +1,1 @@
+<?php include RACINE . '/view/viewCa.php'; ?>
